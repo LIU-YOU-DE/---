@@ -1,3 +1,10 @@
 <!--pages/prize/prize.wxml-->
-<text>pages/prize/prize.wxml</text>
-<view>我是奖品</view>
+<view style='padding:30rpx;'>
+  <image src='../../images/prize/banner.png' class='banner' style='height:440rpx;margin-bottom:20rpx;'></image>
+  <image src='../../images/prize/one.png' class='banner' style='height:260rpx;'></image>
+</view>
+<view style='display:flex;padding-left:30rpx;padding-right:30rpx;'>
+  <image src='../../images/prize/two.png' class='bottom' style='margin-right:30rpx;'></image>
+  <image src='../../images/prize/there.png' class='bottom'></image>
+</view>
+

@@ -1,3 +1,25 @@
 <!--pages/ranking/ranking.wxml-->
-<text>pages/ranking/ranking.wxml</text>
-<view>我是排名</view>
+<image src='../../images/ranking/hand2.png' class='top-img'></image>
+<view class="hand">
+  <text class='num'>13</text>
+  <view>
+    <image src='../../images/ranking/3.png' class='top1-img' style="vertical-align:middle;"></image>
+    <view class='top1-name'>呼呼</view>
+  </view>
+  <text class='num'>5683</text>
+</view>
+<view class='handTitle'>
+  <text style='margin-right:90rpx;'>排行</text>
+  <text style='margin-right:90rpx;'>头像</text>
+  <text style='margin-right:160rpx;'>姓名</text>
+  <text>票数</text>
+</view>
+<view class='content' wx:for="{{12}}">
+  <image src='../../images/ranking/new1.png' class='content-image'></image>
+  <view class='content-handImg'></view>
+  <text style='font-size:36rpx;margin-right:110rpx;'>二胡</text>
+  <text style='font-size:30rpx;'>共</text>
+  <text style='font-size:40rpx;color:#DD515A;'>1280</text>
+  <text style='font-size:30rpx;'>票</text>
+</view>
+

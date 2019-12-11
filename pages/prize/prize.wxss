@@ -1,1 +1,7 @@
 /* pages/prize/prize.wxss */
+.banner{
+  width:100%;
+}
+.bottom{
+  height:380rpx;
+}

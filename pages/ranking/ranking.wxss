@@ -1,1 +1,60 @@
 /* pages/ranking/ranking.wxss */
+page{
+  margin:0;
+  padding:0;
+}
+.top-img{
+  width:100%;
+  height:230rpx;
+}
+.num{
+  color:#DD515A;
+  font-size:50rpx;
+  font-weight: bold;
+}
+.hand{
+  margin-top:-120rpx;
+  padding:0 35rpx 0 60rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.top1-img{
+  position:relative;
+  top:-60rpx;
+  border-radius: 50%;
+  display:inline-block;
+  width:100rpx;
+  height:100rpx;
+}
+.top1-name{
+  position:relative;
+  top:-60rpx;
+  color:#333333;
+  font-size: 40rpx;
+  text-align: center
+}
+.handTitle{
+  margin-left:50rpx;
+  color:#666666;
+  font-size:36rpx;
+  margin-bottom:40rpx;
+}
+.content{
+  margin-left:34rpx;
+  margin-bottom:20rpx
+}
+.content-image{
+  width:90rpx;
+  height:90rpx;
+  margin-right:76rpx;
+  vertical-align:middle;
+}
+.content-handImg{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+  background:#DD515A;
+  display:inline-block;
+  margin-right:78rpx;
+  vertical-align:middle;
+}
