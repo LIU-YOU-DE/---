@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ranking/ranking",
+    "pages/prize/prize",
+    "pages/production/production"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#DD515A",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "最美地铁人",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/index.png",
+        "selectedIconPath": "images/tabbar/indexSelect.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "排名",
+        "iconPath": "images/tabbar/ranking.png",
+        "selectedIconPath": "images/tabbar/rankingSelect.png"
+      },
+      {
+        "pagePath": "pages/prize/prize",
+        "text": "奖品",
+        "iconPath": "images/tabbar/prize.png",
+        "selectedIconPath": "images/tabbar/prizeSelect.png"
+      },
+      {
+        "pagePath": "pages/production/production",
+        "text": "我的作品",
+        "iconPath": "images/tabbar/production.png",
+        "selectedIconPath": "images/tabbar/productionSelect.png"
+      }
+    ]
+  }
+}
