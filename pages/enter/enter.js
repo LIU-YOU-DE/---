@@ -1,19 +1,11 @@
-// pages/production/production.js
+// pages/enter/enter.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    "bannerUrl": [{
-      "url": "../../images/prize/banner.png"
-    }, {
-        "url": "../../images/prize/banner.png"
-    }, {
-        "url": "../../images/prize/banner.png"
-    }],
-    indicator:'#DA8B81',
-    indicatorActive:"#DD515A"
+
   },
 
   /**

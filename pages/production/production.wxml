@@ -1,3 +1,43 @@
-<!--pages/production/production.wxml-->
-<text>pages/production/production.wxml</text>
-<view>我是我的作品</view>
+
+<swiper 
+  class='u-wrp-bnr' 
+  indicator-dots='true' 
+  autoplay='true' 
+  interval='3000'
+  indicator-color="{{indicator}}"
+  indicator-active-color="{{indicatorActive}}"           
+  duration='1000' 
+  circular='true'>
+  <block wx:for="{{bannerUrl}}" wx:key="{{bannerUrl}}">
+    <swiper-item>
+      <image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='title'>
+  <text style='margin-right:20rpx;margin-bottom:20rpx;'>38号</text>
+  <text>呼呼</text>
+  <text class='subTitle'>帅气迷人大呼呼</text>
+</view>
+<view style='width:502rpx;margin:0 auto;margin-top:30rpx;'>
+  <view class='number' style='font-size:50rpx;color:#DD515A;'>
+    <text>38</text>
+    <text>38</text>
+    <text>38</text>
+  </view>
+  <view class='number' style='font-size:38rpx;color#333;margin-top:20rpx;margin-bottom:40rpx;'>
+      <text>编号</text>
+      <text>票数</text>
+      <text>排名</text>
+  </view>
+  <view style='display:flex;'>
+    <view>
+      <image src='../../images/my/c3.jpg' class='content-img'></image>
+    </view>
+    <view style='position:relative;'>
+      <image src='../../images/my/a.png' class='right-img' style='position:absolute;bottom:254rpx;left:14rpx;'></image>
+      <image src='../../images/my/c.png' class='right-img' style='position:absolute;bottom:142rpx;left:14rpx;'></image>
+      <image src='../../images/my/b.png' class='right-img' style='position:absolute;bottom:20rpx;left:14rpx;'></image>
+    </view>
+  </view>
+</view>

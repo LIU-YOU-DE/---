@@ -1,1 +1,32 @@
 /* pages/production/production.wxss */
+.u-wrp-bnr {
+  width: 100%;
+}
+.u-img-slide {
+  width: 100%;
+  height: inherit;
+}
+.title{
+  font-size:50rpx;
+  color:#DD515A;
+  margin-top:30rpx;
+  text-align: center;
+}
+.subTitle{
+  display: block;
+  font-size:34rpx;
+  color:#333;
+}
+.number{
+  display:flex;
+  justify-content: space-between;
+}
+.content-img{
+  width:502rpx;
+  height:602rpx;
+}
+.right-img{
+  width:72rpx;
+  height:72rpx;
+  border-radius: 50%;
+}

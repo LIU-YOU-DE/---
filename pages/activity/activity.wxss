@@ -1,0 +1,32 @@
+/* pages/activity/activity.wxss */
+/* pages/enter/enter.wxss */
+/* pages/edit/edit.wxss */
+.name-img{
+  width:45rpx;
+  height:45rpx;
+  margin-right:20rpx;
+}
+.input-box{
+  display: block;
+  padding-left:10rpx;
+  font-size:35rpx;
+  color:#666;
+  margin-top:10rpx;
+}
+.title{
+  font-size:40rpx;
+  color:#333;
+  display:block;
+}
+.name{
+  font-size: 35rpx;
+  color:#666;
+  margin-top:24rpx;
+  display:block;
+}
+.activityDetails{
+  font-size:30rpx;
+  color:#666;
+  margin-top:10rpx;
+  display: block;
+}

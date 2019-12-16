@@ -3,7 +3,12 @@
     "pages/index/index",
     "pages/ranking/ranking",
     "pages/prize/prize",
-    "pages/production/production"
+    "pages/production/production",
+    "pages/edit/edit",
+    "pages/details/details",
+    "pages/enter/enter",
+    "pages/activity/activity",
+    "pages/test/test"
   ],
   "window": {
     "navigationBarBackgroundColor": "#DD515A",

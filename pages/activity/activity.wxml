@@ -1,0 +1,40 @@
+<!--pages/activity/activity.wxml-->
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:48rpx;'>
+  <image src='../../images/activity/title.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>活动主题</text>
+    <text class='activityDetails'>最美地铁人</text>
+  </view>
+</view>
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/activity/time.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>活动时间</text>
+    <text class='activityDetails'>投票时间：2019-11-30~2019-12-30</text>
+  </view>
+</view>
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/activity/relus.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>投票规则</text>
+    <text class='activityDetails'>每位用户可投1票</text>
+  </view>
+</view>
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/activity/gift.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>活动奖励</text>
+    <text class='activityDetails'>一等奖：价值699的双肩包</text>
+    <text class='activityDetails'>一等奖：价值399的d地铁卡</text>
+    <text class='activityDetails'>一等奖：价值199的纪念品</text>
+  </view>
+</view>
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/activity/detail.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>活动介绍</text>
+    <text class='activityDetails'>最美地铁人,最美绿色出行</text>
+  </view>
+</view>
+
+
