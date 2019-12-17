@@ -22,8 +22,7 @@
   justify-content: space-between;
 }
 .content-img{
-  width:502rpx;
-  height:602rpx;
+  width:100%;
 }
 .right-img{
   width:72rpx;

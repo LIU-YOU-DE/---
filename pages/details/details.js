@@ -10,7 +10,7 @@ Page({
     indicator: '#DA8B81',
     indicatorActive: "#DD515A",
     showModalStatus: false,
-    state:''
+    state:'',
   },
   selectGift:function(e){
     this.setData({

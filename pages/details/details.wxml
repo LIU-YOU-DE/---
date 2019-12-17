@@ -31,8 +31,8 @@
     <text>排名</text>
 </view>
   <view style='display:flex;'>
-    <view>
-      <image src='../../images/my/c3.jpg' class='content-img'></image>
+    <view style='width:502rpx;height:602rpx;'>
+      <image src='../../images/my/c3.jpg' mode="widthFix" class='content-img'></image>
     </view>
   </view>
 </view>
