@@ -1,4 +1,5 @@
-<!--miniprogram/pages/takeDetails/takeDetails.wxml-->
+<!--pages/tadeils/tadeils.wxml-->
+
 <view class="pages_all">
 <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
   <block wx:for="{{action_images}}" wx:for-index="index">
@@ -7,19 +8,14 @@
     </swiper-item>
   </block>
 </swiper>
+<view>
 
 
 
 
-<view style="{{onloginBool_wei}}">
-<button class="butt2" style="{{onloginBool_wei}}"  type="warn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo1"  size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="weixin"> 微信一键登陆 </button>
-</view>
-<view style="{{onloginBool_dian}}">
-<view  style="{{shenghe_bool}}">{{mse}}</view>
 <view class="take_name">
     <text>{{user_take_arr['take_id']}}号</text>
-    <text>{{user_take_arr['user_name2']}}</text>
+    <text>{{user_take_arr['take_name']}}</text>
 </view>
   <view class="take_details">
     <text>{{user_take_arr['take_content']}}</text>
@@ -35,7 +31,7 @@
     </view>
     <view class='text_shu'>
         <view class="text_nei">
-           <text class="text_3">{{user_take_arr['take_num']}}</text>
+           <text class="text_3">{{take_num}}</text>
         </view>
         <view class="text_nei">
            <text class="text_2">票数</text>
@@ -43,7 +39,7 @@
    </view>
    <view class='text_shu'>
         <view class="text_nei">
-            <text class="text_3">{{user_take_arr['rank']}}</text>
+            <text class="text_3">{{rank}}</text>
         </view>
         <view class="text_nei">
             <text class="text_2">排名</text>
@@ -51,25 +47,25 @@
     </view>
     </view>
     <view class="take_images_all">
-     <block wx:for='{{user_images}}' wx:key='id'>
+    <block wx:for='{{user_images}}' wx:key='id'>
     <view class="take_images">
         <image class="take_images_1"  src="https://younan.younantech.cn/Public/{{item.take_images_url}}"></image>
     </view> 
     </block>
     </view>
     <view>
-  <view class="img_all">
-   <button id='but' open-type="share" style="display: none;" >213213</button>
-     <label for="but"><view><image class="fengx1" src="../../images/index/srear.png" ></image></view></label>
+    
+  <view class="img_all" style="{{onloginBool_dian}}">
+       <image class="fengx" src="../img/fengxiang1.png" ></image>
+       <image  bindtap="touAction" class="fengx1" src="../img/toupgei.png" ></image>
+       <image class="fengx" src="../img/liwu23.png" ></image>
     </view>
-    </view>
+
+  </view>
+
 
 </view>
-</view>
-
-<view style="{{login_bool}}">
-  <text>{{mse}}</text>
-  <button bindtap="login">立即报名</button>
-</view> 
-
+</view>  
+  <button type="warn" class="butt2" style="{{onloginBool_wei}}line-height: 2.15" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo1"  size="mini" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="weixin"> 授权 </button>
 

@@ -18,24 +18,25 @@
 
 /* 上传图片样式 */
 .q-image-wrap{
-  margin-bottom:40rpx;
-  width: 200rpx;
-  height: 240rpx;
+  margin-top:24rpx;
+  width:340rpx;
+  height:440rpx;
   float: left;
-  margin-left: 10rpx;
+  margin-right: 20rpx;
   position: relative;
+  overflow: hidden;
 }
 .q-image-remover{
-  width: 30rpx;
-  height: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
   position: absolute;
-  top:-18rpx;
-  right:4rpx;
+  top:0rpx;
+  right:0rpx;
  
 }
 .q-image-remover>image{
-  width:40rpx;
-  height:40rpx;
+  width:70rpx;
+  height:70rpx;
   z-index:1000;
 }
 .q-image-remover icon{
@@ -46,59 +47,14 @@
 }
  
 .uploadImgBtn{
-  width: 120rpx;
-  height: 120rpx;
+  width: 150rpx;
+  height: 150rpx;
   text-align: center;
   line-height: 140rpx;
-  margin-left:10rpx;
-  position:relative;
+  border: 6rpx solid #f0f0f0;
   float: left;
 }
-.borbottom{
-  border-bottom:1px solid #F5F5F5;
-  width:90%;margin:0 auto;
-  margin-top:140rpx;
-}
-.borbottom2{
-  border-bottom:1px solid #F5F5F5;
-  width:90%;margin:0 auto;
-  margin-top:260rpx;
-}
-.borbottom3{
-  border-bottom:1px solid #F5F5F5;
-  width:90%;margin:0 auto;
-  margin-top:420rpx;
-}
-.borbottom4{
-  border-bottom:1px solid #F5F5F5;
-  width:90%;margin:0 auto;
-  margin-top:540rpx;
-}
-.uploadImg{
-  width: 200rpx;
-  height: 240rpx;
-  text-align: center;
-  line-height: 140rpx;
-  margin-left:10rpx;
-  position:relative;
-  float: left;
-}
-.uploadIcon{
-  width:120rpx;
-  height:120rpx;
-  background:#F0F0F0;
-  font-size:120rpx;
-  text-align:center;
-  position:absolute;
-  bottom:0;
-  line-height:90rpx;
-  color:#ccc;
-}
-.uploadBox{
-  margin-left:106rpx;
-}
-.button{
-  height:100rpx;
-  margin:0 auto;
-  margin-top:120rpx;
+.uploadImgBtn icon{
+  font-size: 80rpx;
+  color: #999;
 }

@@ -1,0 +1,4 @@
+/* pages/isLogin/isLogin.wxss */
+.nihao{
+  margin: 50% 0 ;
+}

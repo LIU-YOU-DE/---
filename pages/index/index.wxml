@@ -1,1 +1,125 @@
-<view>首页</view>
+<view class='gray-content fc-black'>
+  <view class='vote-top'>
+    <view class='banner'>
+      <swiper autoplay>
+        <block wx:for='{{action_images}}' wx:key='id'>
+          <swiper-item>     
+            <imgBox src='https://younan.younantech.cn/Public/{{item.images_url}}'></imgBox>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="top_text">
+        <text>上海最美地铁人评选</text>
+    </view> 
+<view class='deadline fs-large'>
+      <view class='line left'></view>
+      <view>
+        <!-- <image class='clock.png' src='../../images/clock.png'></image> -->
+         <view style="color:#dd515a;opacity: 1;font-family: Bitstream Vera Serif Bold;"><text class="juli">距离投票结束</text></view> 
+         <view>
+
+         <text  decode="{{true}}" space="true" class="shu">{{countDownDay}}</text><text class="zi" decode="{{true}}" space="true">天&nbsp;&nbsp;&nbsp;&nbsp;</text>
+          <text  decode="{{true}}" space="true" class="shu">{{countDownHour}}</text ><text class="zi" decode="{{true}}" space="true">时&nbsp;&nbsp;&nbsp;&nbsp;</text>
+           <text  decode="{{true}}" space="true" class="shu">{{countDownMinute}}</text><text class="zi" decode="{{true}}" space="true">分&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text  decode="{{true}}" space="true" class="shu">{{countDownSecond}}</text><text class="zi" decode="{{true}}" space="true">秒</text>
+         </view>    
+      </view>
+      <view class='line left'></view>
+    </view>
+    <view class='info fs-large'>
+      <view class='tb-inline'>
+        <text class='top'>12</text>
+        <text class='bottom'> 报名人数</text>
+      </view>
+      <view class='tb-inline'>
+        <text class='top'>66</text>
+        <text class='bottom'> 累计投票</text>
+      </view>
+      <view class='tb-inline'>
+        <text class='top'>2221</text>
+        <text class='bottom'>访问量</text>
+      </view>
+    </view>
+    
+    <!-- <view class='introduction fs-small' bindtap='activityIntr'>活动介绍</view> -->
+  </view>
+  <view class='competitor-list fs-large'>
+    <view class='list-top {{isSearch ? "open": "close"}}'>
+      <!-- <view class='list-title'>你喜欢的参赛成员在哪儿呢？
+        <image src='../../images/1_02.jpg'></image>
+      </view> -->
+      <view class='list-search'>
+        <!-- <view class='fs-medium search-open' bindtap='toggleSearch'>
+          <text class='left icon-jiantou2 iconfont'></text> 搜索</view> -->
+        <view class='search-input'>
+          <view class='input-box'>
+            <text class='icon-sousuo iconfont left'></text>
+            <input placeholder-class="phcolor" type='text' style="font-size:27rpx;color:#999999;" class='left fc-black' placeholder='编号或作品名称' bindinput='searchInput'></input>
+            <text class='search-cancel fc-red' bindtap='toggleSearch'>搜索</text>
+          </view>
+          <!-- <view class='search-comfirm fs-large'>点击搜索
+            <text>"{{searchVal}}" </text>
+          </view> -->
+        </view>
+      </view>
+    </view>
+
+
+<view class="text_bool"> <text bindtap="new2" style="{{new_style}}">最新</text>  <text class="all"></text> <text bindtap="host2" style="{{host_style}}">热门</text>  </view>
+
+
+  <view style="display:none">
+  <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="https://younan.younantech.cn/Public/{{item.images_url_take}}" bindload="onImageLoad"></image>
+</view>
+<scroll-view scroll-y="true" style="height:{{scrollH}}px;margin-left: 1%;" bindscrolltolower="loadImages">
+  <view style="width:100%">
+   
+    <view class="img_item">
+       
+      <view wx:for="{{col1}}" wx:key="id" class="iamges_1">
+        <image src="https://younan.younantech.cn/Public/{{item.images_url_take}}" style="width:100%;height:{{item.height}}px"></image>
+        <view class="name_1">
+        <text>{{item.take_id}}--{{item.take_name}}</text>
+      </view> 
+      <view class="details">
+        <text>{{item.take_content}}</text>
+      </view> 
+      <view class="test_1">
+        <text>{{item.take_num}}票</text>
+        <text class="test_2">|</text>
+        <text bindtap="take_action" id="{{item.take_id}}">来一票</text>
+      </view>
+      </view>
+    </view>
+    
+    <view class="img_item">
+     
+      <view wx:for="{{col2}}" wx:key="id" class="iamges_1">
+        <image src="https://younan.younantech.cn/Public/{{item.images_url_take}}" style="width:100%;height:{{item.height}}px"></image>
+      <view class="name_1">
+        <text>{{item.take_id}}--{{item.take_name}}</text>
+      </view> 
+      <view class="details">
+        <text>{{item.take_content}}</text>
+      </view> 
+      <view class="test_1">
+        <text>{{item.take_num}}票</text>
+        <text class="test_2">|</text>
+        <text bindtap="take_action" id="{{item.take_id}}">来一票</text>
+      </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+     <view class="img_all">
+     <button id='but' open-type="share" style="display: none;" >213213</button>
+     <label for="but"><view><image class="fengx1" src="../../images/index/srear.png" ></image></view></label>
+         
+         <view><image bindtap="add_take" class="fengx" src="../../images/index/login.png" ></image></view>
+    </view>
+
+
+  </view>
+</view>

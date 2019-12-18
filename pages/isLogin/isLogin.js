@@ -1,55 +1,23 @@
-// pages/ranking/ranking.js
+// pages/isLogin/isLogin.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    user_take_arr:[],
-    take_arr:[],
-    take_qian:[],
-    user_take_id:'',
-    onloginBool_wei: 'display: none;',
-    onloginBool_dian: 'display: block;'
+      isBool:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    wx.showLoading({
-      title: '加载中...',
-    })
-    //判断是否登陆
-    this.islogin();
-    //选手数据
-    this.take_arr();
-    //个人数据
-    this.user_arr();
+        this.setData({
+          isBool:options.bool
+        })
   },
-
-  islogin: function () {
-    var userinfo = wx.getStorageSync('userinfo')
-    console.log(userinfo);
-    if (!userinfo['user_id']) {  
-      this.setData({
-        onloginBool_wei: 'display: block;',
-        onloginBool_dian: 'display: none;',
-      })
-    } else {
-      this.user_arr();
-      console.log('sdsadsalu')
-      this.setData({
-        onloginBool_wei: 'display: none;',
-        onloginBool_dian: 'display: block;',
-      })
-    }
-  },
-
-  // //微信授权登陆
   bindGetUserInfo1(res) {
-    
+    console.log(44444422)
     let info = res;
     var start = this;
     console.log(info);
@@ -75,13 +43,26 @@ Page({
                 'content-type': 'application/json' // 默认值
               },
               success: function (res) {
+                console.log(res);
                 var userinfo = {};
                 userinfo['user_id'] = res.data.user_id;
                 userinfo['nickName'] = info.detail.userInfo.nickName;
                 userinfo['avatarUrl'] = info.detail.userInfo.avatarUrl;
                 //用户添加成功，将其信息存入缓存
                 wx.setStorageSync('userinfo', userinfo)
-                start.islogin();
+              var isBool = start.data.isBool;
+                var userinfo = wx.getStorageSync('userinfo')
+                if(userinfo['user_id']){
+                  if (isBool == 1) {
+                    //首页跳来的，去添加页面
+                    wx.navigateTo({
+                      url: '../addTake/addTake',
+                    })
+                  }
+                }else{
+                  console.log('获取失败')
+                }
+             
               }
             })
 
@@ -95,62 +76,6 @@ Page({
       console.log("点击了拒绝授权");
     }
   },  
-  /**
-   * 选手的数据
-   */
-  take_arr:function(){
-    var start = this;
-   
-    wx: wx.request({
-      url: 'https://younan.younantech.cn/index.php/WingAip/RangKing/RangShow',
-      data: {
-  
-      },
-      header: {},
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: function (res) {
-        console.log(res);
-        start.setData({
-          take_arr:res.data.take_arr
-        })
-      },
-      fail: function (res) { },
-      complete: function (res) { 
-        wx.hideLoading()
-      },
-    })
-  },
-  /**
-   * 个人数据
-   */
-  user_arr:function()
-  {
-    var userinfo = wx.getStorageSync('userinfo')
-    var start = this;
-    wx: wx.request({
-      url: 'https://younan.younantech.cn/index.php/WingAip/RangKing/user_arr',
-      data: {
-        user_id: userinfo['user_id']
-      },
-      header: {},
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: function (res) {
-        console.log(res)
-        start.setData({
-          user_take_arr: res.data.user_take_arr,
-        })             
-      },
-      fail: function (res) { },
-      complete: function (res) {
-        wx.hideLoading()
-       },
-    })
-  },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -163,7 +88,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-      
+
   },
 
   /**

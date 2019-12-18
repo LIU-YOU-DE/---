@@ -1,25 +1,57 @@
 <!--pages/ranking/ranking.wxml-->
+
+
+<!-- 授权之前 -->
+<view style="{{onloginBool_wei}}">
 <image src='../../images/ranking/hand2.png' class='top-img'></image>
 <view class="hand">
-  <text class='num'>13</text>
-  <view>
-    <image src='../../images/ranking/3.png' class='top1-img' style="vertical-align:middle;"></image>
-    <view class='top1-name'>呼呼</view>
+  <text class='num'>0</text>
+  <view class="nihao">
+    <image src="../img/wuren.png" class='top12' style="vertical-align:middle;"></image>
+    <button type="warn" class="butt2" style="{{onloginBool_wei}}line-height: 2.15" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo1"  size="mini" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="weixin"> 授权 </button>
   </view>
-  <text class='num'>5683</text>
+  <text class='num'>0</text>
+</view>
+</view>
+
+<!-- 授权之后 -->
+<view style="{{onloginBool_dian}}">
+<image src='../../images/ranking/hand2.png' class='top-img'></image>
+<view class="hand">
+  <text class='num'>{{user_take_arr['rank']}}</text>
+  <view>
+    <image src="{{user_take_arr['user_images']}}" class='top1-img' style="vertical-align:middle;"></image>
+    <view class='top1-name'>{{user_take_arr['user_name2']}}</view>
+  </view>
+  <text class='num'>{{user_take_arr['take_num']}}</text>
+</view>
 </view>
 <view class='handTitle'>
   <text style='margin-right:90rpx;'>排行</text>
-  <text style='margin-right:90rpx;'>头像</text>
+  <text style='margin-right:99rpx;'>头像</text>
   <text style='margin-right:160rpx;'>姓名</text>
   <text>票数</text>
 </view>
-<view class='content' wx:for="{{12}}">
-  <image src='../../images/ranking/new1.png' class='content-image'></image>
-  <view class='content-handImg'></view>
-  <text style='font-size:36rpx;margin-right:110rpx;'>二胡</text>
-  <text style='font-size:30rpx;'>共</text>
-  <text style='font-size:40rpx;color:#DD515A;'>1280</text>
-  <text style='font-size:30rpx;'>票</text>
+
+ <block wx:for='{{take_arr}}' wx:key='id'>
+<view class='content'>
+ <view wx:if="{{item.rank==1}}"class="left_rank"><image  src='../../images/ranking/1.png' class='content-image'></image></view>
+  
+   <view wx:if="{{item.rank==2}}"  class="left_rank"> <image  src='../../images/ranking/2.png' class='content-image'></image></view>
+
+  <view  wx:if="{{item.rank==3}}" class="left_rank"><image src='../../images/ranking/3.png' class='content-image'></image></view>
+
+    <view wx:if="{{item.rank>3}}" class="left_rank"> <text  class='content-image test11'>{{item.rank}}</text></view>
+   
+  <view class='content-handImg'><image  class='content-handImg' src="{{item.user_images}}"></image></view>
+  <text class='name-box'>{{item.user_name2}}</text>
+  <view class='right-box'>
+    <text style='font-size:30rpx;'>共</text>
+    <text style='font-size:40rpx;color:#DD515A;'>{{item.take_num}}</text>
+    <text style='font-size:30rpx;'>票</text>
+  </view>
 </view>
+</block>
+
 

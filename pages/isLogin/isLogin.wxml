@@ -1,0 +1,7 @@
+<!--pages/isLogin/isLogin.wxml-->
+
+
+<view class="nihao">
+ <button type="warn" class="butt2" style="{{onloginBool_wei}}line-height: 2.15" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo1"  loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="weixin"> 授权登陆 </button>
+        </view>

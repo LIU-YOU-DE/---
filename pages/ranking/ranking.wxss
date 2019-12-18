@@ -17,6 +17,9 @@ page{
   padding:0 35rpx 0 60rpx;
   display: flex;
   justify-content: space-around;
+  height: 74px;
+
+
 }
 .top1-img{
   position:relative;
@@ -40,21 +43,66 @@ page{
   margin-bottom:40rpx;
 }
 .content{
-  margin-left:34rpx;
+  margin-left:1.1%;
   margin-bottom:20rpx
 }
 .content-image{
   width:90rpx;
   height:90rpx;
-  margin-right:76rpx;
+  /* margin-right:76rpx; */
   vertical-align:middle;
 }
 .content-handImg{
-  width:100rpx;
-  height:100rpx;
+  width:85rpx;
+  height:94rpx;
   border-radius:50%;
   background:#DD515A;
   display:inline-block;
   margin-right:78rpx;
   vertical-align:middle;
+}
+.name-box{
+  font-size:36rpx;
+  display:inline-block;
+  width:200rpx;
+}
+.right-box{
+  display:inline-block;
+  margin-left:16rpx;
+  width:150rpx;
+  text-align:center;
+}
+.test11{
+  text-align: center;
+  height:90rpx;
+ width: 20%;
+ font-size: 112%;
+ margin-left: 1%;
+ margin-right: 9%;
+  
+}
+.left_rank{
+  text-align: center;
+  margin-top: 3%;
+  width: 20%;
+  float: left;
+  margin-right: 5%;
+  
+}
+.butt2{
+  width: 128rpx;
+  right: 18rpx;
+  height: 47rpx;
+}
+.top12{
+  position: relative;
+  top: -7rpx;
+  border-radius: 50%;
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+}
+.nihao{
+  position: relative;
+  bottom: 56rpx;
 }

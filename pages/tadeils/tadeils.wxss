@@ -65,17 +65,21 @@
   margin: 20rpx 0;
 }
 .fengx1{
-  width: 75rpx;
+  width: 283rpx;
   height: 75rpx;
-  margin: 28% 0;
-  
+  margin: 0 80rpx;
  
 }
 .img_all{
   height: 200rpx;
   /* text-align: center; */
    position: fixed;
-  bottom: -6%;
-  left: 85%;
+  bottom: -100rpx;
+  left: 67rpx;
   
+}
+.butt2{
+  width: 128rpx;
+  right: 18rpx;
+  height: 47rpx;
 }

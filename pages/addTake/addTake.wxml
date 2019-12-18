@@ -1,0 +1,52 @@
+<!--pages/edit/edit.wxml-->
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:48rpx;'>
+  <image src='../../images/edit/name.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>作品名称</text>
+      <input placeholder-class="phcolor"  class='name' type='text'  placeholder='作品名称' bindinput='take_name'></input>
+  </view>
+</view>
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/edit/phone.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>手机号</text>
+    <input placeholder-class="phcolor"  class='name' type='text'  placeholder='手机号' bindinput='user_phone'></input>
+  </view>
+</view>
+<view style='display:flex;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/edit/upload.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>上传照片</text>
+    <!-- 上传图片 -->
+  </view>
+</view>
+<view class="uploadBox">
+  <block wx:for="{{images}}" wx:key="*this">
+    <view class="q-image-wrap">
+      <!-- 图片缩略图  -->
+      <image class="q-image" style='width:200rpx;height:240rpx;display:inline-block;margin-bottom:10rpx;' src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+      <!-- 移除图片的按钮  -->
+      <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+        <image src='../../images/edit/jian.png'></image>
+      </view>
+    </view>
+  </block>
+    <view class="{{images.length==0?'uploadImgBtn':(images.length==3 ?'uploadImgBtn':'uploadImg')}}" bindtap="chooseImage" wx:if="{{images.length < 6}}">
+      <view class='uploadIcon'>+</view>
+    </view>
+</view>
+
+<view class="{{images.length==0?'borbottom':(images.length==1?'borbottom2':(images.length==2?'borbottom2':(images.length==3?'borbottom3':'borbottom4')))}}"></view>
+
+<view style='display:flex;border-bottom:1px solid #F5F5F5;width:90%;margin:0 auto;margin-top:40rpx;'>
+  <image src='../../images/edit/describe.png' class='name-img'></image>
+  <view style='position:relative;top:-3rpx;margin-bottom:19rpx;'>
+    <text class='title'>描述</text>
+    <input placeholder-class="phcolor"  class='name' type='text'  placeholder='作品名称' bindinput='take_content'></input>
+  </view>
+</view>
+
+<view style='text-align:center;'>
+  <image   bindtap="puloadFile" src='../../images/edit/button2.png' class='button'></image>
+</view>
+  
